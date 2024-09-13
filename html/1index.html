@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 1</title>
+    <style>
+        /* universal selector */
+        * {
+            background-color: #4d4d4d;
+            color: #ffffff; /* use six letter for consitence */
+        }
+        /* individual selector it is use very less it mean we can individually target element*/
+        p{
+            background-color: #450303;
+        }
+        /* class and id selector most of time like 95% of time we go with class, id uselly generated one */
+        /* class is targeted by "." and id is targeted by "#" */
+        /* id selector have highest perfernce after come class*/
+        .warning{
+            background-color: rgb(245, 162, 7);
+            color: #ffffff;
+            padding: 3px;
+            border: 3px solid #ffffff;
+        }
+
+        #warning{
+            background-color: rgb(17, 16, 14);
+            color: #7b1111;
+            padding: 3px;
+            border: 3px solid #ffffff;
+        }
+
+        /* and selector (chained)*/
+        li.bg-black.text-white{
+            background-color: #000000;
+            color: #ffffff
+        }
+
+        /* combined selector use lot */
+        /* it is like and operator*/
+        span, li {
+            background-color: burlywood; /* these color are bad beecause each browser treat these color differently*/
+        }
+
+        /*  inside an element */
+        div ul li {
+            background-color: #152446;
+        }
+
+        /* direct child */
+        div > li {
+            background-color: #9813e5;
+        }
+
+        /* sibling '~' it select only element after class(sibling  all element) or  '+' it select element after class only one element*/
+        .sibling ~ p {
+            background: #c915ae;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Heading-->
+     <span>span is just span, nothing more</span>
+    <h1>Setting up first class</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, mollitia.</p>
+    <h1 class="bg-black text-white">Hello</h1>
+    <h2 id="warning">hey</h2>
+    <h3 class="warning" id="warning">hi</h3>
+    <h4>hello</h4>
+    <h5>hey</h5>
+    <h6>hey</h6>
+
+
+
+    <!--Paragraph-->
+    <p>i am a paragraph</p>
+    <p>test1</p>
+    <p class="sibling">test2</p>
+    <p>test3</p>
+    <p>test4</p>
+    <p>test5</p>
+
+    <!--Formating tags-->
+    <b>Bold text</b>
+    <strong>important</strong>
+    <i>Italic</i>
+    <em>Emphasized</em>
+    <mark>marked</mark>
+    <del>999 Rs</del> 199Rs
+    <sub>test</sub>
+    <sup>testtwo</sup>
+
+    <!-- lists-->
+     <!--order list-->
+     <ol>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+     </ol>
+
+      <!--unorder list-->
+      <div>welcome to div</div>
+      <div>
+        <li>awesome</li>
+      <ul>
+        <li>test ul</li>
+        <li>test4 ul</li>
+      
+        <li>test3 ul</li>
+        <li>test4 ul</li>
+      </ul>
+      <li>test4 ul</li>
+    </div>
+
+      <ul type="square">
+        <li>test ul</li>
+        <li>test ul</li>
+        <li>test ul</li>
+        <li>test ul</li>
+      </ul>
+      <!-- ctrl+/ for comment -->
+
+      <!-- image -->
+       <!-- ../ go one directory back and ./ mean current directory-->
+       <img src="./image.png" alt="">
+
+       <!-- image with attributes -->
+        <img src="./image.png" height="50px" width="50px" alt="LOC logo">
+
+        <!-- clickable images -->
+         <!-- anchor tag -->
+         <a href="#">link</a>
+
+         <a href="https://ineuron.ai">
+            <img src="./image.png" alt="">
+         </a>
+
+         <!-- _parent -->
+         <a href="https://ineuron.ai" target="_blank">   
+            <img src="./image.png" alt="">
+         </a>
+
+        <p>lorem i</p>
+        <p> lorem i</p>
+
+        <!-- these all are same this is for our reading only -->
+        <div></div>
+        <nav></nav>
+        <section></section>
+        <footer></footer>
+
+         <!-- link attributes -->
+         <!-- talk above -->
+
+         <!-- audio in a div -->
+        <audio  src="./audio.mp3"></audio>
+        <audio controls src="./audio.mp3"></audio>
+        
+        <audio controls>
+            <source src="./audio.mp3"
+            type="audio/mpeg"/>
+        </audio>
+
+        <!-- video in a div -->
+        <video width="300" controls src="./video.mp4"></video>
+        <!-- or -->
+        <video width="300" controls>
+            <source src="./video.mp4"
+            type="video/mp4"/>
+        </video>
+
+        <!-- video control -->
+        <!-- learn from mdm -->
+
+        <!-- iframe -->
+        <iframe width="300"
+        src="https://www.youtube.com/embed/Vi9bxu-M-ag?si=71VpVCbWOM04mflf" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer;
+        autoplay; 
+        clipboard-write; 
+        encrypted-media; 
+        gyroscope; 
+        picture-in-picture; 
+        web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen></iframe>
+
+        <!-- tables -->
+        <!-- search table mdn html -->
+        <table border>
+            <tr>
+                <td>Sr. No</td>
+                <td>Name</td>
+                <td>Hello</td>
+            </tr>
+        </table>
+
+        <table border>
+            <tr>
+                <td>Sr. No</td>
+                <td>Name</td>
+                <td rowspane="5">Hello 1</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>A</td>
+                
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>B</td>
+                
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>C</td>
+                
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>D</td>
+            </tr>
+
+            <tr>
+                <td colspan="3">Hello</td>
+                
+            </tr>
+        </table> <br>
+
+
+
+
+        <!-- forms  -->
+        <!-- get form and post form -->
+        <form action="#">
+            Name: <input type="text" name="" placeholder="enter your name" id="">
+        </form>
+
+        <form action="#">
+            Name: <input type="text" name="name" placeholder="Full Name" id="" > <br>
+            Email: <input type="email" name="email" placeholder="E-mail" id=""><br>
+            Password: <input type="password" name="password" placeholder="Full Name" id=""><br>
+            <label for="gender">Gender: </label>
+            <input type="radio" name="gender" value="male" />male
+            <input type="radio" name="gender" value="female" />female
+            <!-- if i change the name the gender radio button will change -->
+            <br/>
+            coding : <br />
+            <input type="checkbox" name="lang" value="html" />HTML <br>
+            <input type="checkbox" name="lang" value="css" /> CSS <BR>
+            <input type="checkbox" name="lang" value="JavaScript" />JavaScript <br>
+            <input type="checkbox" name="lang" value="ReactJS" /> ReactJS <BR>
+            <button type="submit">Submit</button>
+            
+        </form>
+
+        
+
+
+</body>
+</html>
